@@ -1,0 +1,6 @@
+{
+  "name": "Telegram Monetag Mini App",
+  "description": "Production-ready Telegram Mini App with official Monetag SDK advertising integration, Telegram WebApp theme sync, and backend initData verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
