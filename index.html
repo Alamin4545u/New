@@ -1,20 +1,194 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>Telegram Monetag Mini App</title>
-    <meta name="description" content="Production-ready Telegram Mini App with official Monetag SDK advertising integration, Telegram WebApp theme sync, and backend initData verification." />
-    <meta property="og:title" content="Telegram Monetag Mini App" />
-    <meta property="og:description" content="Production-ready Telegram Mini App with official Monetag SDK advertising integration, Telegram WebApp theme sync, and backend initData verification." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <!-- Telegram Web Apps Official SDK -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  </head>
-  <body class="bg-slate-900 text-slate-100 antialiased select-none touch-manipulation">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0814">
+<title>Vexora Rewards</title>
+<!-- Monetag SDK: replace the zone ID only if your publisher dashboard gives you a different one. -->
+<script src="//libtl.com/sdk.js" data-zone="12308086" data-sdk="show_12308086"></script>
+<style>
+:root{color-scheme:dark;--bg:#0b0814;--surface:#171226;--surface2:#211832;--stroke:#ffffff14;--muted:#a9a0bb;--white:#faf7ff;--purple:#a45cff;--pink:#e34fd0;--mint:#62e5b5;--red:#ff718d;--shadow:0 18px 45px #0008}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% -8%,#4b2471 0,transparent 35%),radial-gradient(ellipse at 110% 35%,#30194c 0,transparent 30%),var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh;padding-bottom:92px}button,input,select{font:inherit}button{color:inherit;cursor:pointer}.wrap{max-width:520px;margin:auto;padding:16px 15px 28px}.topbar{display:flex;justify-content:space-between;align-items:center;margin:5px 2px 19px}.brand{display:flex;align-items:center;gap:10px}.brandmark{width:43px;height:43px;border-radius:15px;background:linear-gradient(145deg,#f2a2ff,#a64aff 58%,#6d2bcb);box-shadow:0 8px 25px #a64aff66;display:grid;place-items:center;font-size:25px;font-weight:950;transform:rotate(-5deg)}.brand b{font-size:18px;letter-spacing:.2px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.3px;margin-top:3px}.user-chip{width:39px;height:39px;border-radius:50%;border:1px solid var(--stroke);background:linear-gradient(145deg,#34244e,#171126);display:grid;place-items:center;font-weight:800}.page{display:none;animation:appear .22s ease}.page.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}.hero{position:relative;overflow:hidden;border-radius:26px;padding:22px 20px;background:linear-gradient(125deg,#46246c,#251839 62%,#4c1f56);border:1px solid #ffffff1b;box-shadow:var(--shadow);min-height:172px}.hero:after{content:"";position:absolute;width:180px;height:180px;right:-38px;top:-75px;border-radius:50%;background:radial-gradient(circle,#e36aff88,transparent 67%)}.eyebrow{font-size:10px;color:#e3c7ff;text-transform:uppercase;letter-spacing:1.8px;font-weight:800}.hero h1{font-size:26px;line-height:1.15;margin:9px 0 7px;max-width:270px}.hero p{font-size:11px;line-height:1.6;color:#d6c9e7;margin:0;max-width:260px}.hero-logo{position:absolute;right:22px;top:53px;width:88px;height:88px;border-radius:27px;display:grid;place-items:center;font-size:48px;font-weight:950;background:linear-gradient(145deg,#f4b5ff,#a44aff 58%,#6324b8);box-shadow:inset 6px 6px 14px #fff6,inset -8px -9px 18px #280a5c88,0 16px 30px #09000f99;transform:rotate(12deg)}.balance-card{margin-top:14px;padding:17px 18px;border-radius:21px;background:linear-gradient(130deg,#211831,#151020);border:1px solid var(--stroke);box-shadow:var(--shadow)}.between{display:flex;justify-content:space-between;align-items:center;gap:10px}.muted{color:var(--muted)}.tiny{font-size:10px}.tag{font-size:9px;padding:6px 9px;border-radius:20px;border:1px solid #ffffff1c;background:#ffffff0c;color:#dfcaff}.balance-number{font-size:31px;font-weight:900;letter-spacing:-1px;margin:8px 0 2px}.balance-number small{font-size:12px;color:#c7b8db;letter-spacing:0}.hint{font-size:10px;line-height:1.5;color:#9f96b1}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0 21px}.btn{border:0;border-radius:14px;min-height:46px;padding:11px 14px;font-size:12px;font-weight:800;display:inline-flex;justify-content:center;align-items:center;gap:7px;transition:transform .15s,filter .15s}.btn:active{transform:scale(.98)}.btn:disabled{opacity:.5;cursor:not-allowed}.primary{background:linear-gradient(110deg,#994cff,#d94dcb);box-shadow:0 8px 23px #a348ff40;color:white}.secondary{background:#ffffff0c;border:1px solid var(--stroke)}.success{background:linear-gradient(110deg,#159e7b,#43cda1);color:#061b16}.danger{background:#ff66831a;border:1px solid #ff668344;color:#ff9caf}.full{width:100%}.section-head{display:flex;justify-content:space-between;align-items:center;margin:22px 2px 12px}.section-head h2{font-size:15px;margin:0}.section-head button{background:none;border:0;color:#d0a8ff;font-size:10px}.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{border:1px solid var(--stroke);border-radius:18px;padding:14px;background:linear-gradient(145deg,#1e1830,#14101f);min-height:105px;text-align:left}.tile .emoji{width:32px;height:32px;border-radius:11px;background:#a34cff24;display:grid;place-items:center;font-size:17px;margin-bottom:9px}.tile b{font-size:12px;display:block}.tile small{font-size:10px;color:var(--muted);display:block;margin-top:4px;line-height:1.4}.panel{padding:16px;border-radius:19px;background:linear-gradient(145deg,#1d172c,#14101f);border:1px solid var(--stroke);margin-bottom:11px}.panel h3{font-size:13px;margin:0 0 12px}.adbox{border:1px solid #c58aff35;background:linear-gradient(120deg,#2a1b40,#181225);padding:16px;border-radius:20px}.ad-symbol{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#b25aff,#e44dcb);display:grid;place-items:center;font-size:20px}.adbox .btn{width:100%;margin-top:14px}.rowitem{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid var(--stroke)}.rowitem:last-child{border:0}.rowicon{width:38px;height:38px;border-radius:13px;background:#a54cff20;display:grid;place-items:center;flex:0 0 38px}.rowtext{flex:1;min-width:0}.rowtext b{font-size:11px;display:block}.rowtext small{font-size:9px;color:var(--muted);display:block;margin-top:4px;line-height:1.4}.smallbtn{font-size:10px;font-weight:800;border:1px solid var(--stroke);border-radius:10px;padding:8px 10px;background:#ffffff0b}.field{display:block;width:100%;border:1px solid var(--stroke);border-radius:12px;background:#0e0b17;color:white;padding:12px;margin:7px 0 12px;outline:none}.field:focus{border-color:#b26cff}.label{font-size:10px;color:#cfc3df}.profile-icon{width:54px;height:54px;border-radius:18px;background:linear-gradient(145deg,#ed9aff,#853bdb);display:grid;place-items:center;font-size:24px;font-weight:900}.empty{text-align:center;padding:22px 8px;color:var(--muted);font-size:11px;line-height:1.5}.nav{position:fixed;z-index:9;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(5,1fr);padding:9px 9px calc(9px + env(safe-area-inset-bottom));background:#100d1bee;backdrop-filter:blur(18px);border-top:1px solid var(--stroke)}.nav button{background:none;border:0;color:#817991;font-size:9px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:5px}.nav button i{font-style:normal;font-size:18px}.nav button.active{color:#d4a4ff}.toast{position:fixed;z-index:20;bottom:92px;left:50%;transform:translate(-50%,12px);opacity:0;pointer-events:none;background:#302442;border:1px solid #ffffff25;border-radius:12px;padding:11px 14px;max-width:90%;font-size:11px;text-align:center;transition:.2s;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}.fine{font-size:9px;color:#938aa4;line-height:1.55}.history-line{display:flex;justify-content:space-between;gap:8px;font-size:10px;padding:10px 0;border-bottom:1px solid var(--stroke)}.history-line:last-child{border:0}.switchline{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--stroke);font-size:11px}.footer{text-align:center;color:#696176;font-size:9px;margin:24px 0 5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topbar"><div class="brand"><div class="brandmark">V</div><div><b>Vexora</b><small>REWARDS • MINI APP</small></div></div><div class="user-chip" id="topInitial">V</div></header>
 
+<section class="page active" id="home">
+ <div class="hero"><div class="eyebrow">Welcome to Vexora</div><h1>Earn. Explore.<br>Keep moving.</h1><p>Your rewards space for ads, daily check-ins and activities.</p><div class="hero-logo">V</div></div>
+ <div class="balance-card"><div class="between"><span class="tiny muted">YOUR DEMO BALANCE</span><span class="tag">LOCAL DEMO</span></div><div class="balance-number" id="homeBalance">0 <small>points</small></div><div class="hint">Demo points are stored only in this browser on this device.</div></div>
+ <div class="actions"><button class="btn primary" onclick="showAd()">▶ Show Ads</button><button class="btn secondary" onclick="navigate('wallet')">◈ Wallet</button></div>
+ <div class="section-head"><h2>Quick access</h2><button onclick="navigate('earn')">All activities →</button></div>
+ <div class="tiles">
+  <button class="tile" onclick="navigate('earn')"><span class="emoji">🎯</span><b>Earn Center</b><small>Ads and demo activities</small></button>
+  <button class="tile" onclick="claimDaily()"><span class="emoji">🎁</span><b>Daily Bonus</b><small>One local claim per day</small></button>
+  <button class="tile" onclick="navigate('friends')"><span class="emoji">👥</span><b>Invite Friends</b><small>Share your referral link</small></button>
+  <button class="tile" onclick="navigate('profile')"><span class="emoji">👤</span><b>My Profile</b><small>Telegram and local settings</small></button>
+ </div>
+ <div class="section-head"><h2>Featured</h2><span class="tag">Monetag</span></div>
+ <div class="adbox"><div class="between"><div class="between" style="justify-content:flex-start"><div class="ad-symbol">✦</div><div><b style="font-size:12px">Watch an advertisement</b><div class="tiny muted" style="margin-top:4px">Ad availability depends on your region.</div></div></div></div><button class="btn primary" onclick="showAd()">Open Advertisement</button></div>
+</section>
+
+<section class="page" id="earn">
+ <div class="section-head"><h2>Earn Center</h2><span class="tag">Local demo</span></div>
+ <div class="adbox"><div class="between" style="justify-content:flex-start"><div class="ad-symbol">▶</div><div><b style="font-size:12px">Monetag advertisement</b><div class="tiny muted">Opens the ad SDK if available.</div></div></div><button class="btn primary" onclick="showAd()">Show Ads</button></div>
+ <div class="section-head"><h2>Activities</h2></div>
+ <div class="panel">
+  <div class="rowitem"><div class="rowicon">🎁</div><div class="rowtext"><b>Daily check-in</b><small>Claim a local demo bonus once each day.</small></div><button class="smallbtn" onclick="claimDaily()">Claim</button></div>
+  <div class="rowitem"><div class="rowicon">🧩</div><div class="rowtext"><b>Complete a sample task</b><small>Demo task to test balance and history.</small></div><button class="smallbtn" onclick="completeTask()">Try</button></div>
+  <div class="rowitem"><div class="rowicon">📺</div><div class="rowtext"><b>Advertisement</b><small>Ad view is not automatically a verified reward.</small></div><button class="smallbtn" onclick="showAd()">Open</button></div>
+ </div>
+ <p class="fine">The daily bonus and sample task are local demonstration features, not real earnings. Ad impressions must not be rewarded unless the ad provider explicitly supports and verifies that reward flow.</p>
+</section>
+
+<section class="page" id="wallet">
+ <div class="section-head"><h2>Wallet</h2><span class="tag">Local demo</span></div>
+ <div class="balance-card"><div class="tiny muted">DEMO POINTS</div><div class="balance-number" id="walletBalance">0 <small>points</small></div><div class="hint">This balance is not cash and is not synced to other devices.</div></div>
+ <div class="panel" style="margin-top:13px"><h3>Create a demo withdrawal request</h3>
+  <label class="label" for="payMethod">Payment method</label><select class="field" id="payMethod"><option value="">Select method</option><option>bKash</option><option>Nagad</option><option>Rocket</option></select>
+  <label class="label" for="payNumber">Payment account number</label><input class="field" id="payNumber" placeholder="01XXXXXXXXX" inputmode="tel" maxlength="20">
+  <label class="label" for="payAmount">Points to request</label><input class="field" id="payAmount" type="number" min="1" step="1" placeholder="Enter points">
+  <button class="btn primary full" onclick="submitWithdrawal()">Save demo request</button>
+  <p class="fine">This only saves a request on this device. It does not send money or contact a payment provider.</p>
+ </div>
+ <div class="section-head"><h2>Transaction history</h2><button onclick="clearHistory()">Clear history</button></div>
+ <div class="panel" id="history"><div class="empty">No activity yet. Complete a demo task to see it here.</div></div>
+</section>
+
+<section class="page" id="friends">
+ <div class="section-head"><h2>Invite Friends</h2><span class="tag">Referral tools</span></div>
+ <div class="hero"><div class="eyebrow">Share Vexora</div><h1>Invite your friends.</h1><p>Share your personal invite link with people you know.</p><div class="hero-logo">↗</div></div>
+ <div class="panel" style="margin-top:13px"><h3>Your invite link</h3><div class="field" id="referralLink" style="overflow-wrap:anywhere;margin-bottom:10px">Open inside Telegram to create your link</div><div class="actions" style="margin:0"><button class="btn primary" onclick="copyReferral()">Copy link</button><button class="btn secondary" onclick="shareReferral()">Share</button></div><p class="fine">Local demo only: referrals are not tracked or rewarded without a server.</p></div>
+</section>
+
+<section class="page" id="profile">
+ <div class="section-head"><h2>Profile</h2><span class="tag">Account</span></div>
+ <div class="panel"><div class="between" style="justify-content:flex-start"><div class="profile-icon" id="profileInitial">V</div><div><b id="profileName">Guest User</b><div class="tiny muted" id="profileUsername">Local browser session</div></div></div></div>
+ <div class="panel"><h3>Account information</h3><div class="rowitem"><div class="rowtext"><b>Telegram user ID</b><small id="telegramId">Unavailable outside Telegram</small></div></div><div class="rowitem"><div class="rowtext"><b>Storage</b><small>Browser localStorage on this device</small></div></div><div class="rowitem"><div class="rowtext"><b>App version</b><small>Vexora Local 1.1</small></div></div></div>
+ <div class="panel"><h3>Local app settings</h3><div class="switchline"><span>Use haptic feedback</span><input type="checkbox" id="hapticToggle" checked></div><button class="btn secondary full" style="margin-top:12px" onclick="exportData()">Export local data</button><button class="btn danger full" style="margin-top:9px" onclick="resetApp()">Reset demo data</button></div>
+ <p class="fine">Telegram user details are read from the Telegram Web App SDK when opened in Telegram. On ordinary localhost browser preview, guest mode is used.</p>
+</section>
+<div class="footer">VEXORA REWARDS · LOCAL DEMO BUILD</div>
+</div>
+
+<nav class="nav">
+ <button class="active" data-page="home" onclick="navigate('home')"><i>⌂</i>HOME</button>
+ <button data-page="earn" onclick="navigate('earn')"><i>✧</i>EARN</button>
+ <button data-page="wallet" onclick="navigate('wallet')"><i>◈</i>WALLET</button>
+ <button data-page="friends" onclick="navigate('friends')"><i>♧</i>FRIENDS</button>
+ <button data-page="profile" onclick="navigate('profile')"><i>◉</i>PROFILE</button>
+</nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+'use strict';
+const STORE_KEY='vexora_local_demo_v1';
+const tg=window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
+let state=loadState();
+function loadState(){
+ try{const raw=localStorage.getItem(STORE_KEY);if(raw){const x=JSON.parse(raw);if(x&&typeof x.points==='number'&&Array.isArray(x.history))return x;}}catch(e){}
+ return {points:0,lastDaily:'',taskDone:false,history:[],withdrawals:[]};
+}
+function saveState(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){toast('Browser storage is unavailable.');}}
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(window.__vexToast);window.__vexToast=setTimeout(()=>el.classList.remove('show'),2600);}
+function addHistory(title,detail,delta){state.history.unshift({title,detail,delta,at:new Date().toISOString()});state.history=state.history.slice(0,40);saveState();render();}
+function render(){
+ const amount=Number(state.points||0).toLocaleString();
+ document.getElementById('homeBalance').innerHTML=amount+' <small>points</small>';
+ document.getElementById('walletBalance').innerHTML=amount+' <small>points</small>';
+ const history=document.getElementById('history');
+ if(!state.history.length){history.innerHTML='<div class="empty">No activity yet. Complete a demo task to see it here.</div>';}
+ else{history.innerHTML=state.history.map(x=>'<div class="history-line"><span><b>'+escapeHtml(x.title)+'</b><br><span class="muted">'+escapeHtml(x.detail)+' · '+new Date(x.at).toLocaleString()+'</span></span><b style="color:'+(x.delta>=0?'#62e5b5':'#ff91a8')+'">'+(x.delta>=0?'+':'')+x.delta+'</b></div>').join('');}
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function navigate(page){
+ document.querySelectorAll('.page').forEach(el=>el.classList.toggle('active',el.id===page));
+ document.querySelectorAll('.nav button').forEach(el=>el.classList.toggle('active',el.dataset.page===page));
+ window.scrollTo({top:0,behavior:'smooth'});
+ if(tg&&document.getElementById('hapticToggle')?.checked){try{tg.HapticFeedback.selectionChanged();}catch(e){}}
+}
+function claimDaily(){
+ const today=new Date().toISOString().slice(0,10);
+ if(state.lastDaily===today){toast('Today’s demo bonus has already been claimed.');return;}
+ state.lastDaily=today;state.points+=10;addHistory('Daily check-in','Local demo bonus',10);toast('10 demo points added.');
+}
+function completeTask(){
+ if(state.taskDone){toast('The sample task is already completed.');return;}
+ state.taskDone=true;state.points+=5;addHistory('Sample task','Local demonstration task',5);toast('5 demo points added.');
+}
+async function showAd(){
+ const adFn=window.show_12308086;
+ if(typeof adFn!=='function'){toast('Ad SDK not ready or unavailable. Check internet and zone setup.');return;}
+ try{
+  const result=adFn();
+  if(result&&typeof result.then==='function')await result;
+  toast('Ad request sent. No points were credited.');
+ }catch(err){console.error('Monetag SDK error',err);toast('Ad could not be opened. Try again later.');}
+}
+function submitWithdrawal(){
+ const method=document.getElementById('payMethod').value;
+ const number=document.getElementById('payNumber').value.trim();
+ const amount=Number(document.getElementById('payAmount').value);
+ if(!method||!number||!Number.isInteger(amount)||amount<1){toast('Enter a valid method, account and points amount.');return;}
+ if(amount>state.points){toast('Not enough demo points.');return;}
+ state.points-=amount;
+ const req={method,number,amount,status:'Local demo request',at:new Date().toISOString()};
+ state.withdrawals.unshift(req);
+ addHistory('Demo withdrawal request',method+' • '+maskNumber(number),-amount);
+ document.getElementById('payNumber').value='';document.getElementById('payAmount').value='';
+ toast('Demo request saved on this device.');
+}
+function maskNumber(s){return s.length>4?'••••'+s.slice(-4):s;}
+function getReferralUrl(){
+ const u=tg?.initDataUnsafe?.user;
+ if(!u)return '';
+ const bot='VexoraReward_bot';
+ return 'https://t.me/'+bot+'?start='+encodeURIComponent('ref_'+u.id);
+}
+function refreshReferral(){
+ const u=tg?.initDataUnsafe?.user;
+ const link=getReferralUrl();
+ document.getElementById('referralLink').textContent=link||'Open this app inside Telegram to generate your personal link.';
+}
+async function copyReferral(){
+ const link=getReferralUrl();if(!link){toast('Open the Mini App inside Telegram first.');return;}
+ try{await navigator.clipboard.writeText(link);toast('Referral link copied.');}catch(e){toast('Clipboard permission unavailable.');}
+}
+function shareReferral(){
+ const link=getReferralUrl();if(!link){toast('Open the Mini App inside Telegram first.');return;}
+ const share='https://t.me/share/url?url='+encodeURIComponent(link)+'&text='+encodeURIComponent('Join me on Vexora Rewards!');
+ if(tg?.openTelegramLink)tg.openTelegramLink(share);else if(navigator.share)navigator.share({title:'Vexora Rewards',url:link}).catch(()=>{});else window.open(share,'_blank','noopener');
+}
+function exportData(){
+ const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='vexora-local-data.json';a.click();URL.revokeObjectURL(url);toast('Local data export created.');
+}
+function resetApp(){
+ if(!confirm('Reset all Vexora demo points, tasks and history on this device?'))return;
+ state={points:0,lastDaily:'',taskDone:false,history:[],withdrawals:[]};saveState();render();toast('Local demo data reset.');
+}
+function initTelegram(){
+ if(tg){try{tg.ready();tg.expand();tg.setHeaderColor('#0b0814');tg.setBackgroundColor('#0b0814');}catch(e){}}
+ const u=tg?.initDataUnsafe?.user;
+ if(u){
+  const name=[u.first_name,u.last_name].filter(Boolean).join(' ')||'Telegram user';
+  const initial=(u.first_name||'V').charAt(0).toUpperCase();
+  document.getElementById('profileName').textContent=name;
+  document.getElementById('profileUsername').textContent=u.username?'@'+u.username:'Telegram account';
+  document.getElementById('telegramId').textContent=String(u.id);
+  document.getElementById('topInitial').textContent=initial;
+  document.getElementById('profileInitial').textContent=initial;
+ }else{
+  document.getElementById('profileName').textContent='Guest User';
+  document.getElementById('profileUsername').textContent='Localhost preview';
+ }
+ refreshReferral();
+}
+document.getElementById('hapticToggle').addEventListener('change',()=>toast('Preference applies in this browser session.'));
+initTelegram();render();
+</script>
+</body>
+</html>
